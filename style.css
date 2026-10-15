@@ -1,0 +1,363 @@
+/* ================= 全域基礎設定 ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #ccc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  width: 100%;
+  max-width: 480px; /* 手機比例置中，在電腦預覽也不會過寬 */
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ================= 經典 Logo ================= */
+.ph-logo {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+.ph-logo .white { color: #ffffff; }
+.ph-logo .orange {
+  background: #ffa31a;
+  color: #000000;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+/* ================= 年齡驗證頁 (index.html) ================= */
+.gate-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  background: radial-gradient(circle at center, #1c1c1c 0%, #0a0a0a 100%);
+}
+
+.gate-card {
+  background: #000000;                      /* 1. 純黑，完全不帶灰 */
+  border: 1px solid #222222;               /* 深色微邊框，讓邊緣更俐落 */
+  border-radius: 0px;
+  width: 100%;
+  max-width: 320px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12),
+              0 0 15px rgba(255, 255, 255, 0.06); /* 2. 後方散出的薄白漸層光 */
+}
+
+.gate-card .heading1 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 12px 0 10px;
+}
+
+.gate-card .noticeLink {
+  display: inline-block;
+  background: transparent;   /* 無背景 */
+  border: 0.4px solid #ffffff; /* 細白邊 */
+  border-radius: 50px;       /* 橢圓形 */
+  color: #ffffff;            /* 文字改白色搭配白邊 */
+  font-size: 11px;
+  padding: 3px 10px;         /* 維持原本尺寸 */
+  margin-bottom: 14px;
+}
+
+.gate-card .bodyText {
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1.45;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.gate-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 滿 24 歲按鈕 */
+.btn-over24 {
+  display: block;
+  background: transparent;        /* 無背景 */
+  border: 0.4px solid #ffffff;      /* 白色細邊 */
+  border-radius: 50px;            /* 橢圓形 */
+  color: #ffffff;                 /* 白色文字 */
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* 未滿 24 歲按鈕 */
+.btn-under24 {
+  display: block;
+  background: transparent;        /* 無背景 */
+  border: 0.4px solid #ffffff;      /* 白色細邊 */
+  border-radius: 50px;            /* 橢圓形 */
+  color: #ffffff;                 /* 白色文字 */
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+}
+
+.gate-footer {
+  margin-top: 16px;
+  font-size: 10px;
+  color: #555;
+}
+
+/* ================= 首頁 頂部導覽列 ================= */
+#mobileHeader {
+  height: 48px;
+  background: #141414;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-btn svg { width: 22px; height: 22px; fill: currentColor; }
+
+.orientation-tag {
+  background: #222;
+  color: #bbb;
+  font-size: 11px;
+  border-radius: 12px;
+  padding: 4px 8px;
+  border: 1px solid #333;
+}
+
+/* ================= 頂部分類與膠囊滑動列 ================= */
+.bottomNav {
+  background: #0a0a0a;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 8px 10px;
+  gap: 6px;
+  scrollbar-width: none;
+  border-bottom: 1px solid #1a1a1a;
+}
+.bottomNav::-webkit-scrollbar { display: none; }
+.bottomNav a {
+  background: #1a1a1a;
+  color: #888;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.bottomNav a.active { color: #ffa31a; background: #222; }
+
+.sectionTitle {
+  padding: 14px 12px 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sectionTitle::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: #ffa31a;
+}
+
+.trendingPills {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 12px 12px;
+  gap: 8px;
+  scrollbar-width: none;
+}
+.trendingPills::-webkit-scrollbar { display: none; }
+.pill {
+  background: #222;
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pill.shorties {
+  background: linear-gradient(90deg, #ff5e36, #ffa31a);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ================= 影片卡片列表 (最新版排版) ================= */
+.videoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 10px 24px;
+}
+
+.videoWrapper {
+  background: #151515;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.singleVideo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1e1e1e;
+  overflow: hidden;
+}
+
+/* 純 CSS 假縮圖 */
+.fake-thumb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #222 0%, #171717 100%);
+  color: #444;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.duration {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.underThumb {
+  padding: 8px 10px 10px;
+}
+
+/* 縮圖下第一行：頻道與觀看數 */
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+.channelInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #999;
+  font-weight: 600;
+}
+.badge-verified {
+  color: #3a87e8;
+  font-size: 11px;
+}
+.viewsInfo {
+  color: #666;
+  font-size: 11px;
+}
+
+/* 縮圖下第二行：標題與三點選單 */
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.videoTitle {
+  color: #eee;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+.kebabMenu {
+  color: #666;
+  font-size: 15px;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+/* ================= 頁尾 Footer ================= */
+.footerThumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 16px 10px;
+  border-top: 1px solid #222;
+  background: #111;
+  list-style: none;
+}
+.footerThumbs li a {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 16px 40px;
+  color: #555;
+  font-size: 11px;
+  background: #0d0d0d;
+}
+.footerMsg {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
