@@ -29,7 +29,7 @@ a {
 .ph-logo {
   display: inline-flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 20px;
   letter-spacing: -0.5px;
 }
@@ -46,9 +46,9 @@ a {
 .gate-container {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* 1. 改為靠最頂端（原本是 center） */
   justify-content: center;
-  padding: 20px 16px;
+  padding: 0 16px;         /* 2. 上下 padding 改為 0，直接貼頂 */
   background: radial-gradient(circle at center, #1c1c1c 0%, #0a0a0a 100%);
 }
 
@@ -57,7 +57,7 @@ a {
   border: 1px solid #222222;               /* 深色微邊框，讓邊緣更俐落 */
   border-radius: 0px;
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   padding: 24px 20px;
   text-align: center;
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.12),
@@ -66,7 +66,7 @@ a {
 
 .gate-card .heading1 {
   color: #fff;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
   margin: 12px 0 10px;
 }
@@ -76,15 +76,15 @@ a {
   background: transparent;   /* 無背景 */
   border: 0.4px solid #ffffff; /* 細白邊 */
   border-radius: 50px;       /* 橢圓形 */
-  color: #ffffff;            /* 文字改白色搭配白邊 */
-  font-size: 11px;
-  padding: 3px 10px;         /* 維持原本尺寸 */
+  color: #d6d6d6;            /* 文字改白色搭配白邊 */
+  font-size: 14px;
+  padding: 8px 10px;         /* 維持原本尺寸 */
   margin-bottom: 14px;
 }
 
 .gate-card .bodyText {
-  font-size: 11px;
-  color: #ffffff;
+  font-size: 14px;
+  color: #d6d6d6;
   line-height: 1.45;
   margin-bottom: 20px;
   text-align: justify;
@@ -102,10 +102,11 @@ a {
   background: transparent;        /* 無背景 */
   border: 0.4px solid #ffffff;      /* 白色細邊 */
   border-radius: 50px;            /* 橢圓形 */
-  color: #ffffff;                 /* 白色文字 */
-  font-size: 13px;
-  padding: 12px;
+  color: #d6d6d6;                 /* 白色文字 */
+  font-size: 14px;
+  padding: 15px;
   text-align: center;
+  font-weight: 700;
 }
 
 /* 未滿 24 歲按鈕 */
@@ -114,10 +115,11 @@ a {
   background: transparent;        /* 無背景 */
   border: 0.4px solid #ffffff;      /* 白色細邊 */
   border-radius: 50px;            /* 橢圓形 */
-  color: #ffffff;                 /* 白色文字 */
-  font-size: 13px;
-  padding: 12px;
+  color: #d6d6d6;                 /* 白色文字 */
+  font-size: 14px;
+  padding: 15px;
   text-align: center;
+  font-weight: 700;
 }
 
 .gate-footer {
