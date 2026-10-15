@@ -131,7 +131,7 @@ a {
 /* ================= 首頁 頂部導覽列 ================= */
 #mobileHeader {
   height: 48px;
-  background: #141414;
+  background: #000000;
   border-bottom: 1px solid #222;
   display: flex;
   align-items: center;
