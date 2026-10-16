@@ -217,7 +217,7 @@ a {
 .pill {
   background: #111111;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 6px 12px;
   border-radius: 16px;
   white-space: nowrap;
@@ -334,6 +334,6 @@ footer {
   background: #000000;
 }
 .footerMsg {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.4;
 }
