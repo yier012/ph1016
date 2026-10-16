@@ -170,7 +170,7 @@ a {
 /* ================= 頂部分類與膠囊滑動列 ================= */
 /* ================= 四等分頂部次選單 ================= */
 .bottomNav {
-  background: #141414;
+  background: #111111;
   display: flex;
   width: 100%;
   border-bottom: 1px solid #282828;
@@ -215,13 +215,14 @@ a {
 }
 .trendingPills::-webkit-scrollbar { display: none; }
 .pill {
-  background: #222;
+  background: #111111;
   color: #ffffff;
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 16px;
   white-space: nowrap;
   flex-shrink: 0;
+  border: 2px solid #202020;
 }
 
 /* ================= 影片卡片列表 (最新版排版) ================= */
@@ -284,8 +285,9 @@ a {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #999;
+  color: #d9d9d9;
   font-weight: 600;
+  font-size: 12px;
 }
 .badge-verified {
   color: #3a87e8;
@@ -293,7 +295,7 @@ a {
 }
 .viewsInfo {
   color: #666;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* 縮圖下第二行：標題與三點選單 */
